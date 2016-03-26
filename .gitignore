@@ -1,0 +1,13 @@
+*.o
+*.out
+*.d
+*.d.*
+main
+temp
+tmp
+cat
+core
+QueueTest
+GPATH
+GRTAGS
+GTAGS
