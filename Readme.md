@@ -1,17 +1,17 @@
 # test for SGI STL
 
-# Containers
+## Containers
 
-# Algorithms
+## Algorithms
 
-# Iterators
+## Iterators
 
-## 概要
+### 概要
 
 迭代器是一种行为类似指针的对象，而指针的各种行为中最常见也最重要的就是 dereference
 和 member access，因此，迭代器最重要的编程工作就是对 operator* 和 operator-> 进行重载。
 
-## 型别萃取
+### 型别萃取
 
 ``` c++
 template <class _Iterator>
@@ -42,8 +42,8 @@ struct iterator_traits<const _Tp*> {
 };
 ```
 
-# Adapters
+## Adapters
 
-# Functors
+## Functors
 
-# Allocators
+## Allocators
