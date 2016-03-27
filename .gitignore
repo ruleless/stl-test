@@ -2,6 +2,7 @@
 *.out
 *.d
 *.d.*
+.#*
 main
 temp
 tmp

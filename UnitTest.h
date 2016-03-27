@@ -4,7 +4,7 @@
 class UnitTest : public CppUnit::TestFixture
 {
 	CPPUNIT_TEST_SUITE(UnitTest);
-	CPPUNIT_TEST(testVoid);
+	CPPUNIT_TEST(testVector);
 	CPPUNIT_TEST_SUITE_END();
   public:
 	UnitTest();
@@ -12,7 +12,7 @@ class UnitTest : public CppUnit::TestFixture
   
 	virtual void setUp();
   
-	virtual void tearDown();
+	virtual void tearDown();	
 
-	void testVoid();
+	void testVector();
 };

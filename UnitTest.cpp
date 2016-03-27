@@ -1,5 +1,5 @@
 #include "UnitTest.h"
-#include "vector.h"
+#include <vector>
 
 CPPUNIT_TEST_SUITE_REGISTRATION(UnitTest);
 
@@ -14,10 +14,6 @@ void UnitTest::setUp()
 }
   
 void UnitTest::tearDown()
-{
-}
-
-void UnitTest::testVoid()
 {
 }
 

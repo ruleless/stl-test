@@ -1,5 +1,3 @@
-
-CXXFLAGS:=-I ./sgi-stl
 LDFLAGS:=-lcppunit
 
 TARGET:=main.out
