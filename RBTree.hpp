@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-namespace alg
+namespace test
 {
 enum _ERBTreeColor
 {

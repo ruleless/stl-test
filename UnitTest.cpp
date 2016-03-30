@@ -27,7 +27,7 @@ void UnitTest::testVector()
 
 void UnitTest::testRBTree()
 {
-	alg::RBTree<int> t;
+	test::RBTree<int> t;
 	srand(time(NULL));
 
 	int insertTimes = 100;
@@ -61,7 +61,7 @@ void UnitTest::testRBTree()
 
 void UnitTest::test_rbtree_erase()
 {
-	alg::RBTree<int> t;
+	test::RBTree<int> t;
 	t.insert(80);
 	t.insert(60);
 	t.insert(30);
