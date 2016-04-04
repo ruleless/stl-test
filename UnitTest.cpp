@@ -1,5 +1,6 @@
 #include "UnitTest.h"
 #include "RBTree.hpp"
+#include "RBTree.h"
 #include <vector>
 
 CPPUNIT_TEST_SUITE_REGISTRATION(UnitTest);
@@ -18,6 +19,16 @@ void UnitTest::tearDown()
 {
 }
 
+static const Test& returnTest()
+{
+	return Test();
+}
+
+void UnitTest::testMisc()
+{
+	Test a = returnTest();
+}
+
 void UnitTest::testVector()
 {
 	std::vector<int> v;
@@ -27,7 +38,7 @@ void UnitTest::testVector()
 
 void UnitTest::testRBTree()
 {
-	test::RBTree<int> t;
+	alg::RBTree<int> t;
 	srand(time(NULL));
 
 	int insertTimes = 100;
@@ -57,11 +68,27 @@ void UnitTest::testRBTree()
 	CPPUNIT_ASSERT(t.minimun() == minNum);
 	CPPUNIT_ASSERT(t.maxmun() == maxNum);
 	printf("maxLevel:%d nodenum:%d\n", t.maxLevel(), t.size());
+
+	alg::RBTree<int> rbt;
+	rbt.insert(30);
+	rbt.insert(20);
+	rbt.insert(40);
+	rbt.insert(50);
+	rbt.print();
+	
+	rbt.erase(30);
+	rbt.print();
+	rbt.erase(20);
+	rbt.print();
+	rbt.erase(40);
+	rbt.print();
+	rbt.erase(50);
+	rbt.print();
 }
 
 void UnitTest::test_rbtree_erase()
 {
-	test::RBTree<int> t;
+	alg::RBTree<int> t;
 	t.insert(80);
 	t.insert(60);
 	t.insert(30);

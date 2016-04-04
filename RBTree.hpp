@@ -140,8 +140,7 @@ class RBTree
 		}
 		else
 		{
-			T nullT;
-			return nullT;
+			return (T)(0);
 		}
 	}
 
@@ -159,8 +158,7 @@ class RBTree
 		}
 		else
 		{
-			T nullT;
-			return nullT;
+			return (T)(0);
 		}
 	}
 
