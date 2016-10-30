@@ -1,29 +1,29 @@
-#include "AlgNumericTest.h"
+#include "UnitTest.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <numeric>
 #include <vector>
 
-CPPUNIT_TEST_SUITE_REGISTRATION(AlgNumericTest);
+CPPUNIT_TEST_SUITE_REGISTRATION(UnitTest);
 
-AlgNumericTest::AlgNumericTest()
+UnitTest::UnitTest()
 {	
 }
 
-AlgNumericTest::~AlgNumericTest()
+UnitTest::~UnitTest()
 {
 }
 	
-void AlgNumericTest::setUp()
+void UnitTest::setUp()
 {
-}
-		
+}		
 	
-void AlgNumericTest::tearDown()
+void UnitTest::tearDown()
 {
 }
 
-void AlgNumericTest::test_accumulate()
+void UnitTest::testAccumulate()
 {	
 	srand(time(NULL));
 	

@@ -19,16 +19,6 @@ void UnitTest::tearDown()
 {
 }
 
-static const Test& returnTest()
-{
-	return Test();
-}
-
-void UnitTest::testMisc()
-{
-	Test a = returnTest();
-}
-
 void UnitTest::testVector()
 {
 	std::vector<int> v;
@@ -86,7 +76,7 @@ void UnitTest::testRBTree()
 	rbt.print();
 }
 
-void UnitTest::test_rbtree_erase()
+void UnitTest::testRBtreeErase()
 {
 	alg::RBTree<int> t;
 	t.insert(80);

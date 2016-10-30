@@ -1,26 +1,15 @@
+#ifndef __UNITTEST_H__
+#define __UNITTEST_H__
+
 #include "cppunit/TestFixture.h"
 #include "cppunit/extensions/HelperMacros.h"
-
-class Test
-{
-  public:
-    Test()
-	{
-		a = 0;
-		b = 0;
-	}
-    virtual ~Test() {}
-  protected:
-	int a, b;
-};
 
 class UnitTest : public CppUnit::TestFixture
 {
 	CPPUNIT_TEST_SUITE(UnitTest);
-	CPPUNIT_TEST(testMisc);
 	CPPUNIT_TEST(testVector);
 	CPPUNIT_TEST(testRBTree);
-	CPPUNIT_TEST(test_rbtree_erase);
+	CPPUNIT_TEST(testRBTree);
 	CPPUNIT_TEST_SUITE_END();
   public:
 	UnitTest();
@@ -30,9 +19,10 @@ class UnitTest : public CppUnit::TestFixture
   
 	virtual void tearDown();
 
-	void testMisc();
-
 	void testVector();
+	
 	void testRBTree();
-	void test_rbtree_erase();
+	void testRBtreeErase();
 };
+
+#endif // __UNITTEST_H__
