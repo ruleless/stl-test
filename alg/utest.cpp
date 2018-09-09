@@ -79,7 +79,7 @@ class UnitTest : public CppUnit::TestFixture {
     void testShuffle() {
         puts("before shuffle:");
         std::for_each(array_.begin(), array_.end(),
-                      [&](int x) {
+                      [](int x) {
                           printf("%d ", x);
                       });
         puts("");
@@ -87,7 +87,7 @@ class UnitTest : public CppUnit::TestFixture {
         std::random_shuffle(array_.begin(), array_.end());
         puts("after shuffle:");
         std::for_each(array_.begin(), array_.end(),
-                      [&](int x) {
+                      [](int x) {
                           printf("%d ", x);
                       });
     }
@@ -106,8 +106,3 @@ int main(int argc, char *argv[]) {
 
     exit(0);
 }
-
-
-
-
-
