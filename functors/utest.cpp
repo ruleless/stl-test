@@ -7,9 +7,9 @@
 
 int main(int argc, char *argv[])
 {
-  CppUnit::TextUi::TestRunner runner;
-  runner.addTest(CppUnit::TestFactoryRegistry::getRegistry().makeTest());
-  runner.run();
+    CppUnit::TextUi::TestRunner runner;
+    runner.addTest(CppUnit::TestFactoryRegistry::getRegistry().makeTest());
+    runner.run();
 
-  exit(0);
+    exit(0);
 }
