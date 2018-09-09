@@ -12,9 +12,9 @@ class UnitTest : public CppUnit::TestFixture
   public:
     UnitTest();
     virtual ~UnitTest();
-	
+
 	virtual void setUp();
-	
+
 	virtual void tearDown();
 
 	void testAccumulate();

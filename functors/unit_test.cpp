@@ -1,4 +1,4 @@
-#include "UnitTest.h"
+#include "unit_test.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,25 +8,25 @@
 CPPUNIT_TEST_SUITE_REGISTRATION(UnitTest);
 
 UnitTest::UnitTest()
-{	
+{
 }
 
 UnitTest::~UnitTest()
 {
 }
-	
+
 void UnitTest::setUp()
 {
-}		
-	
+}
+
 void UnitTest::tearDown()
 {
 }
 
 void UnitTest::testAccumulate()
-{	
+{
 	srand(time(NULL));
-	
+
 	std::vector<int> v;
 	int sum = 0;
 	int count = 100;
