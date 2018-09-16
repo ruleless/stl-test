@@ -1,5 +1,4 @@
-CXXFLAGS:=-std=c++11
-LDFLAGS:=-lcppunit
+LDFLAGS:=-lgtest -lpthread
 
 TARGET:=utest.out
 
