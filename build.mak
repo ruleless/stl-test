@@ -5,7 +5,7 @@ CXX=clang++
 MAKE=make
 
 CFLAGS+=-g -Wall
-CXXFLAGS+=-g -Wall
+CXXFLAGS+=-g -Wall -std=c++11
 
 AR=ar cr
 RM=-rm -rf

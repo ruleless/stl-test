@@ -1,5 +1,5 @@
-LDFLAGS:=-lcppunit
+LDFLAGS:=-lgtest -lpthread
 
-TARGET:=main.out
+TARGET:=utest.out
 
 include ../build.mak

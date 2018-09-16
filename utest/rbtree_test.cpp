@@ -1,32 +1,8 @@
-#include "unit_test.h"
 #include "rbtree.hpp"
 #include "rbtree.h"
-#include <vector>
+#include <gtest/gtest.h>
 
-CPPUNIT_TEST_SUITE_REGISTRATION(UnitTest);
-
-UnitTest::UnitTest()
-{}
-
-UnitTest::~UnitTest()
-{}
-
-void UnitTest::setUp()
-{
-}
-
-void UnitTest::tearDown()
-{
-}
-
-void UnitTest::testVector()
-{
-    std::vector<int> v;
-
-    v.push_back(1);
-}
-
-void UnitTest::testRBTree()
+TEST(rbtree, test)
 {
     alg::RBTree<int> t;
     srand(time(NULL));
@@ -34,20 +10,18 @@ void UnitTest::testRBTree()
     int insertTimes = 100;
     int maxNum = -1;
     int minNum = 65535;
-    for (int i = 0; i < insertTimes; ++i)
-    {
+    for (int i = 0; i < insertTimes; ++i) {
         t.insert(i);
         if (i > maxNum)
             maxNum = i;
         if (i < minNum)
             minNum = i;
     }
-    CPPUNIT_ASSERT(t.minimun() == minNum);
-    CPPUNIT_ASSERT(t.maxmun() == maxNum);
+    EXPECT_EQ(t.minimun(), minNum);
+    EXPECT_EQ(t.maxmun(), maxNum);
     printf("maxLevel:%d nodenum:%d\n", t.maxLevel(), t.size());
 
-    for (int i = 0; i < insertTimes; ++i)
-    {
+    for (int i = 0; i < insertTimes; ++i) {
         int n = rand() % 65535;
         if (n > maxNum)
             maxNum = n;
@@ -55,8 +29,8 @@ void UnitTest::testRBTree()
             minNum = n;
         t.insert(n);
     }
-    CPPUNIT_ASSERT(t.minimun() == minNum);
-    CPPUNIT_ASSERT(t.maxmun() == maxNum);
+    EXPECT_EQ(t.minimun(), minNum);
+    EXPECT_EQ(t.maxmun(), maxNum);
     printf("maxLevel:%d nodenum:%d\n", t.maxLevel(), t.size());
 
     alg::RBTree<int> rbt;
@@ -76,7 +50,7 @@ void UnitTest::testRBTree()
     rbt.print();
 }
 
-void UnitTest::testRBtreeErase()
+TEST(rbtree, testErase)
 {
     alg::RBTree<int> t;
     t.insert(80);
